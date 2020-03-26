@@ -19,7 +19,6 @@ Databases are stored with Postgres and SQlite. Stripe Test API is used for this 
 
 LIVE SITE [GYM-MAX&PRODUCTS](https://gym-max-products.herokuapp.com/)
 
-
 ## The Goal & Purpose of The Website
 
 ### The Goal
@@ -68,7 +67,7 @@ the main page have calling image, services, pricing The footer has social icons,
 
 ## Mockup
 
-* Main image [main image](mainimage.png) 
+* Main image [main image](static/img/mainimage.png) 
 
 # Features
 
@@ -79,24 +78,24 @@ the main page have calling image, services, pricing The footer has social icons,
 * The user can press on the more details button on each item to find out more information about the   product.
 * The user can register profile by clicking on register icon in the navbar.
 
-* ![register](registerimage.png) 
+* ![register](static/img/registerimage.png) 
 
 * The user can login with their email or username by clicking on the login icon in the navbar.
 * The user can inspect the cart by clicking on the cart icon the navbar.
 
-* ![Product](itemviewcart.png)
+* ![Product](static/img/itemviewcart.png)
 
 * The user can remove any product by clicking the remove button in the cart page.
 * The user can checkout by pressing on the checkout button in the cart page.
 * The user can log out by pressing the log out button in the navbar.
 
-![login](loginimage.png) 
+![login](static/img/loginimage.png) 
 
 * The user can make an purchase by clicking on the submit a payment in the checkout page.
 
 * The user can contact the owner of the gym and ecommerce by writing email
 
- ![Contact us](contactuspage.png)
+ ![Contact us](static/img/contactuspage.png)
 
 ## Features Left to Impelemt
 
@@ -182,14 +181,14 @@ the main page have calling image, services, pricing The footer has social icons,
 
 * the site was tested on travis.
 
-![Screenshot](travistest.png)
+![Screenshot](static/img/travistest.png)
 
 ## Registration & Login
 
 * Created multiple accounts and used the Django admin panel to see if users have been registered.
 * After Register and logging in there should pop up a green message either "you have succssfully registered" or "you have successfully logged in". 
 
- ![Register](registerimage.png) 
+ ![Register](static/img/registerimage.png) 
 
 * Once registered and logged in you can proceed to the checkout form.
 * If not logged in you can add items to the cart but you can't proceed to the checkout without logging in.
@@ -202,11 +201,11 @@ the main page have calling image, services, pricing The footer has social icons,
 
 ## Products
 
-![Products](productimages.png) 
+![Products](static/img/productimages.png) 
 
 * When clicking on more details button - redirected succsfully to that item page.
 
-![Product view](productcart.png) 
+![Product view](static/img/productcart.png) 
 
 * When clicked on continue shopping - gets redirected to products page.
 
@@ -220,13 +219,13 @@ the main page have calling image, services, pricing The footer has social icons,
 * In the Django Admin Panel - Checkout - Orders to see all succesful orders registered.
 * Once filled in the checkout form and clicked submit payment, a pop up message with "thank you for your order" shows up. Also checked my Stripe dashboard for succesful payments. See picture below:
 
-![Screenshot](stripe.png)
+![Screenshot](static/img/stripe.png)
 
 ## Travis 
 
 * Travis was used to scan packages and libraries for bugs and anything that might damage travis or the server, to ensure that that server is safe and free of code that might be dangerous. All tests were passed, see the green build passing button in top of the README file and see pictures below:
 
-![TRAVIS TESTING](travistest.png)
+![TRAVIS TESTING](static/img/travistest.png)
 
 ## Code Validators
 
