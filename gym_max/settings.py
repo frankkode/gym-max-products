@@ -167,9 +167,6 @@ STRIPE_SECRET_KEY = os.environ.get("STRIPE_TEST_SECRET_KEY", "sk_test_I6mWRYlphL
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 
-# message email conf
-MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
-
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
