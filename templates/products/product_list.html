@@ -1,0 +1,54 @@
+{% extends 'base.html' %} 
+{% url 'home' as home_url %} {% url 'contact' as contact_url %} {% url 'login' as login_url %} {% url 'logout' as logout_url %} {% url 'register' as register_url %} {% url 'cart:home' as cart_url %}
+{% url 'products' as products_url %}
+{% load static %} 
+{% block content %}
+  <h1 class="text-center products-title">SHOW ROOM</h1>
+  <form action="{% url 'do_search'%}" method="get">
+
+				<div class="input-group">
+
+					<input type="text" class="form-control" name="do_search" placeholder="Search..." aria-label="Input group example" aria-describedby="btnGroupAddon">
+					<div class="input-group-append">
+
+						<button type="search" class="btn-sm btn btn-dark ">Search <i class="fa fa-search"></i></button>
+					</div>
+				</div>
+			</form>
+    <div class="row row-flex list-products">
+    {% for obj in qs %}
+       {% include 'card.html' %}
+    {% endfor %} 
+    </div>
+
+
+    <!-- Pagination -->
+            <nav aria-label="Page navigation example">
+              <ul class="pagination pagination-template d-flex justify-content-center">
+                {% if queryset.has_previous %}                
+                <li class="page-item"><a href="?{{ page_request_var }}={{ queryset.previous_page_number }}" class="page-link"> <i class="fa fa-angle-left"></i></a></li>
+                {% endif %}
+                <li class="page-item"><a href="?{{ page_request_var }}={{ queryset.number }}" class="page-link active">{{ queryset.number }}</a></li>
+                {% if queryset.has_next %}
+                <li class="page-item"><a href="?{{ page_request_var }}={{ queryset.next_page_number }}" class="page-link"> <i class="fa fa-angle-right"></i></a></li>
+                {% endif %}
+              </ul>
+            </nav>
+
+            {% if is_paginated %}
+            
+            <nav aria-label="Page navigation example">
+              <ul class="pagination pagination-template d-flex justify-content-center">
+                {% if page_obj.has_previous %}                
+                <li class="page-item"><a href="?{{ page_request_var }}={{ page_obj.previous_page_number }}" class="page-link"> <i class="fa fa-angle-left"></i></a></li>
+                {% endif %}
+                <li class="page-item"><a href="?{{ page_request_var }}={{ page_obj.number }}" class="page-link active">{{ page_obj.number }}</a></li>
+                {% if page_obj.has_next %}
+                <li class="page-item"><a href="?{{ page_request_var }}={{ page_obj.next_page_number }}" class="page-link"> <i class="fa fa-angle-right"></i></a></li>
+                {% endif %}
+              </ul>
+            </nav>
+            
+            {% endif %}
+            <hr>
+{% endblock %}

@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+  
+
+  <!--/ Intro Skew Star /-->
+  <div class="intro intro-single route bg-image" style="background-image: url({% static 'img/overlay-bg.jpg'%})">
+    <div class="overlay-mf"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h2 class="intro-title mb-4">Blog</h2>
+          <ol class="breadcrumb d-flex justify-content-center">
+            <li class="breadcrumb-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="/email">Contact us</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="/login">Login</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="/register">Register</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="/logout">Logout</a>
+            </li>
+            <li class="breadcrumb-item active">Data</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Intro Skew End /-->
+
+  <!--/ Section Blog-Single Star /-->
+  
+
+    <div class="container mt-4">
+      <div class="row">
+        <!-- Latest Posts -->
+        <main class="posts-listing col-lg-8"> 
+          <div class="container">
+            <div class="row">
+              <!-- post -->
+              {% for post in queryset %}
+              <div class="post col-xl-6">
+                <div class="post-thumbnail"><a href="{{ post.get_absolute_url }}"><img src="{{ post.thumbnail.url }}" alt="..." class="img-fluid img-thumbnail"></a></div>
+                <div class="post-details">
+                  <div class="post-meta d-flex justify-content-between">
+                    {% comment %} <div class="date meta-last">20 May | 2016</div> {% endcomment %}
+                    <div class="category">
+                    {% for cat in post.categories.all %}
+                    <a href="#"><small>{{ cat }}</small></a>
+                    {% endfor %}
+                    </div>
+                  </div><a href="{{ post.get_absolute_url }}">
+                    <h3 class="h4">{{ post.title }}</h3></a>
+                  <p class="text-muted">{{ post.overview|linebreaks|truncatechars:100 }}</p>
+                  <footer class="post-footer d-flex align-items-center">
+                    <a href="{{ post.get_absolute_url }}" class="btn btn-outline-success">Read more
+                      
+                    </a>
+                    <div class="date"><i class="icon-clock"></i>{{ post.timestamp|timesince }} ago</div>
+                    <div class="comments meta-last"><i class="icon-comment"></i>{{ post.comment_count }} Comments</div>
+                  </footer>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            <!-- Pagination -->
+            <nav aria-label="Page navigation example">
+              <ul class="pagination pagination-template d-flex justify-content-center">
+                {% if queryset.has_previous %}                
+                <li class="page-item"><a href="?{{ page_request_var }}={{ queryset.previous_page_number }}" class="page-link"> <i class="fa fa-angle-left"></i></a></li>
+                {% endif %}
+                <li class="page-item"><a href="?{{ page_request_var }}={{ queryset.number }}" class="page-link active">{{ queryset.number }}</a></li>
+                {% if queryset.has_next %}
+                <li class="page-item"><a href="?{{ page_request_var }}={{ queryset.next_page_number }}" class="page-link"> <i class="fa fa-angle-right"></i></a></li>
+                {% endif %}
+              </ul>
+            </nav>
+
+            {% if is_paginated %}
+            
+            <nav aria-label="Page navigation example">
+              <ul class="pagination pagination-template d-flex justify-content-center">
+                {% if page_obj.has_previous %}                
+                <li class="page-item"><a href="?{{ page_request_var }}={{ page_obj.previous_page_number }}" class="page-link"> <i class="fa fa-angle-left"></i></a></li>
+                {% endif %}
+                <li class="page-item"><a href="?{{ page_request_var }}={{ page_obj.number }}" class="page-link active">{{ page_obj.number }}</a></li>
+                {% if page_obj.has_next %}
+                <li class="page-item"><a href="?{{ page_request_var }}={{ page_obj.next_page_number }}" class="page-link"> <i class="fa fa-angle-right"></i></a></li>
+                {% endif %}
+              </ul>
+            </nav>
+            
+            {% endif %}
+          </div>
+        </main>
+        <!-- Widget [Search Bar Widget]-->
+    <div class="widget search">
+    <header>
+        <h3 class="h6">Search the blog</h3>
+    </header>
+    <!-- Widget [Search Bar Widget]-->
+    <div class="widget-sidebar sidebar-search">
+            <h5 class="sidebar-title">Search</h5>
+            <div class="sidebar-content">
+              <form action="{% url 'search' %}" >
+                <div class="input-group">
+                  <input type="text" name="q"  class="form-control" placeholder="Search for...." aria-label="Search for...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-secondary btn-search" type="submit">
+                      <span class="ion-android-search"></span>
+                    </button>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+    </div>
+      </div>
+    </div>
+
+{% endblock content %}

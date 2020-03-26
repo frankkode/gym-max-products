@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% if not billing_profile %}
+    <div class='row text-center'>
+    <div class='col-12 col-md-6'>
+        <h2 id="checkout-forms-header-login" class='lead'>Login</h2>
+        {% include 'accounts/form.html' with form=login_form next_url=request.build_absolute_uri %}
+    </div>
+    <div class='col-12 col-md-6'> 
+        <h2 id="checkout-forms-header-email" class="lead">Continue as Guest</h2>
+
+        {% url "guest_register" as guest_register_url %}
+        {% include 'accounts/form.html' with form=guest_form next_url=request.build_absolute_uri action_url=guest_register_url %}
+    </div>
+
+    </div>
+
+{% else %}
+            
+        {% if not object.shipping_address %}
+
+         <div class='row'>
+            <div class='col-md-6 mx-auto col-10'>
+                <p class='lead shipping-header'>Shipping Address</p>
+                <hr class="hr-shipping"/>
+            {% url "checkout_address_create" as checkout_address_create %}
+            {% include 'addresses/form.html' with form=address_form next_url=request.build_absolute_uri action_url=checkout_address_create address_type='shipping' %}
+         </div>
+        </div>
+
+
+        {% elif not object.billing_address %}
+        <div class='row'>
+            <div class='col-md-6 mx-auto col-10'>
+                <p class='lead billing-header'>Billing Address</p>
+                <hr class="hr-billing"/>
+            {% url "checkout_address_create" as checkout_address_create %}
+            {% include 'addresses/form.html' with form=address_form next_url=request.build_absolute_uri action_url=checkout_address_create address_type='billing' %}
+         </div>
+        </div>
+        {% else %}
+            <!-- If the user does't have a saved card -->
+            {% if not has_card %}
+                 <!-- Show credit card -->
+                <h2 class="payment-card">Add a payment card</h2> 
+                <div class='stripe-payment-form' data-token='{{ publish_key }}' data-next-url='{{ request.build_absolute_uri }}' data-btn-title='Add Payment Card'></div>
+            {% else %}    
+    
+                <h1 class="finalize-checkout">Finalize Checkout</h1>
+                
+                <p><span class="item-sum">Cart Items:</span> {% for product in object.cart.products.all %}{{ product }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+                <p><span class="item-sum">Shipping Address:</span> {{ object.shipping_address.get_address }}</p>
+                <p><span class="item-sum">Billing Address:</span> {{ object.shipping_address.get_address }}</p>
+                <p><span class="item-sum">Payment Method:</span> {{ billing_profile.default_card }} (<a href="{{ billing_profile.get_payment_method_url }}?next={{ request.build_absolute_uri }}" class="change-card">Change</a>)</p>
+                <hr class="hr-checkout">
+                <p class="cart"><span class="cart">Cart Total: <i class="fa fa-usd" aria-hidden="true"></i>{{ object.cart.total }}</p>
+                <p class="cart-shipping">Shipping Total: <i class="fa fa-usd" aria-hidden="true"></i>{{ object.shipping_total }}</p>
+                <p class="cart-total">Order Total: <i class="fa fa-usd" aria-hidden="true"></i>{{ object.total }}</p>
+                <form class='form text-center' method='POST' action="">{% csrf_token %}
+                    <button type='submit' class="checkout-button ">Checkout</button>
+                </form>
+                {% endif %}
+        {% endif %}
+{% endif %}
+
+
+
+{% endblock %}

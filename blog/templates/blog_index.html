@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row py-5">
+        <div class="col-lg-4">
+          <!-- Item -->
+          {% for post in posts %}
+          <figure class="caption-3 mb-0 shadow-sm p-3 bg-white">
+            <a href="{% url 'blog_detail' post.pk %}"><img src="{{ post.image.url }}" alt="" class="w-100"></a>
+            <figcaption class="px-5 py-3 bg-white shadow-sm">
+              <h2 class="h5 mb-1 font-weight-bold font-italic"><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></h2>
+              <p class="mb-0 text-small font-italic text-muted">{{ post.body | slice:":40" }}</p>
+            </figcaption>
+          </figure>
+{% endfor %}
+        </div>
+</div>
+{% endblock %}
+
+
+
+

@@ -1,0 +1,187 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
+<section class="mb-4">
+<div id="body" class="img-fluid">
+
+    <div class="home-text">
+        <p class="para">Be Fit</p>
+        <h1 class="header">Stay Fit.</h1><br>
+        <a href="{% url 'products' %}" class="button para">BUY ONE HERE<i class="fa fa-caret-right right"></i></a>
+    </div>
+</div>
+</section>
+
+<section class="show-case mb-4 mainpage">
+<div class="show-case">
+<!-- Second Row -->
+    <div class="row pb-5 mb-4">
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <!-- Card-->
+            <div class="card shadow-sm border-0 rounded">
+                <div class="card-body p-0 height-gif"><img src="{% static 'img/indoor.gif' %}" alt="" class="w-100 card-img-top height-gif">
+                    <div class="p-4">
+                        <a href="{% url 'products' %}" class="btn mb-4 para remove">INDOOR PRODUCTS</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <!-- Card-->
+            <div class="card shadow-sm border-0 rounded">
+                <div class="card-body p-0 height-gif"><img src="{% static 'img/aoutdoor.gif' %}" alt="" class="w-100 card-img-top height-gif">
+                    <div class="p-4">
+                        <a href="{% url 'products' %}" class="btn mb-4 para remove">OUTDOOR PRODUCT</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <!-- Card-->
+            <div class="card shadow-sm border-0 rounded">
+                <div class="card-body p-0 height-gif"><img src="{% static 'img/pull.gif' %}" alt="" class="w-100 card-img-top height-gif">
+                    <div class="p-4">
+                        <a href="{% url 'email' %}" class="btn mb-4 para remove">PERSONAL INSTRUCTOR</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <!-- Card-->
+            <div class="card shadow-sm border-0 rounded">
+                <div class="card-body p-0 height-gif"><img src="{% static 'img/groupe.gif' %}" alt="" class="w-100 card-img-top height-gif">
+                    <div class="p-4">
+                        <a href="{% url 'email' %}" class="btn mb-4 para remove">GROUPE TRAINING</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="section-color">
+  <div class="container py-5">
+
+    <!-- header pricing -->
+    <header class="text-center mb-5 text-white">
+      <div class="row">
+        <div class="col-lg-7 mx-auto">
+          <h1>GYM Max pricing table</h1>
+          <p class="para">Choose the one fits you!! <br></a></p>
+        </div>
+      </div>
+    </header>
+    <!-- END -->
+
+
+
+    <div class="row text-center align-items-end">
+      <!-- Pricing Table1-->
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <div class="bg-white p-5 rounded-lg shadow">
+          <h1 class="h6 text-uppercase font-weight-bold mb-4">Basic</h1>
+          <h2 class="h1 font-weight-bold">$199<span class="text-small font-weight-normal ml-2">/ month</span></h2>
+
+          <div class="custom-separator my-4 mx-auto bg-primary"></div>
+
+          <ul class="list-unstyled my-5 text-small text-left">
+            <li class="mb-3">
+              <i class="fa fa-check mr-2 text-primary"></i>Gym access</li>
+            <li class="mb-3">
+              <i class="fa fa-check mr-2 text-primary"></i>Sauna access</li>
+            <li class="mb-3">
+              <i class="fa fa-check mr-2 text-primary"></i>Video instructions</li>
+            <li class="mb-3 text-muted">
+              <i class="fa fa-times mr-2"></i>
+              <del>Personal instructor</del>
+            </li>
+            <li class="mb-3 text-muted">
+              <i class="fa fa-times mr-2"></i>
+              <del>Group training</del>
+            </li>
+            <li class="mb-3 text-muted">
+              <i class="fa fa-times mr-2"></i>
+              <del>Massage</del>
+            </li>
+          </ul>
+          <a href="{% url 'email' %}" class="btn btn-primary btn-block p-2 shadow rounded-pill">For more info</a>
+        </div>
+      </div>
+      <!-- END -->
+
+
+      <!-- Pricing Table2-->
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <div class="bg-white p-5 rounded-lg shadow">
+          <h1 class="h6 text-uppercase font-weight-bold mb-4">Pro</h1>
+          <h2 class="h1 font-weight-bold">$399<span class="text-small font-weight-normal ml-2">/ month</span></h2>
+
+          <div class="custom-separator my-4 mx-auto bg-primary"></div>
+
+          <ul class="list-unstyled my-5 text-small text-left font-weight-normal">
+            <li class="mb-3">
+              <i class="fa fa-check mr-2 text-primary"></i>Gym access</li>
+            <li class="mb-3">
+              <i class="fa fa-check mr-2 text-primary"></i>Sauna access</li>
+            <li class="mb-3">
+              <i class="fa fa-check mr-2 text-primary"></i>Video instructions</li>
+            <li class="mb-3">
+              <i class="fa fa-check mr-2 text-primary"></i>Group training</li>
+            <li class="mb-3">
+              <i class="fa fa-check mr-2 text-primary"></i>Personal instructor</li>
+            <li class="mb-3 text-muted">
+              <i class="fa fa-times mr-2"></i>
+              <del>Massage</del>
+            </li>
+          </ul>
+          <a href="{% url 'email' %}" class="btn btn-primary btn-block p-2 shadow rounded-pill">For more info</a>
+        </div>
+      </div>
+      <!-- END -->
+
+
+      <!-- Pricing Table3-->
+      <div class="col-lg-4">
+        <div class="bg-white p-5 rounded-lg shadow">
+          <h1 class="h6 text-uppercase font-weight-bold mb-4">VIP</h1>
+          <h2 class="h1 font-weight-bold">$899<span class="text-small font-weight-normal ml-2">/ month</span></h2>
+
+          <div class="custom-separator my-4 mx-auto bg-primary"></div>
+
+          <ul class="list-unstyled my-5 text-small text-left font-weight-normal">
+            <li class="mb-3">
+              <i class="fa fa-check mr-2 text-primary"></i>Gym access</li>
+            <li class="mb-3">
+              <i class="fa fa-check mr-2 text-primary"></i>Sauna access</li>
+            <li class="mb-3">
+              <i class="fa fa-check mr-2 text-primary"></i>Video instructions</li>
+            <li class="mb-3">
+              <i class="fa fa-check mr-2 text-primary"></i>Group training</li>
+            <li class="mb-3">
+              <i class="fa fa-check mr-2 text-primary"></i>Personal instructor</li>
+            <li class="mb-3">
+              <i class="fa fa-check mr-2 text-primary"></i>Massage</li>
+          </ul>
+          <a href="{% url 'email' %}" class="btn btn-primary btn-block p-2 shadow rounded-pill">For more info</a>
+        </div>
+      </div>
+      <!-- END -->
+
+    </div>
+  </div>
+</section>
+
+<div class="mt-4">
+<div class="embed-responsive embed-responsive-16by9 video-fluid z-depth-1" autoplay loop muted>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/XwSJy-S6oXI?start=19" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+<hr>
+{% endblock %}

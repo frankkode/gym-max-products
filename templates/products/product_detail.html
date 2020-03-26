@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% url 'products' as products_url %}
+
+{% block content %}
+{% url 'cart:home' as cart_url %}
+
+<div class="row description-row">
+    <div class="col-sm-6">
+    {% if object.image %}
+    <div class="detail mb-4">
+      <img src="{{ MEDIA_URL }}{{ object.image }}" class='img-fluid img-detail'>
+    </div>  
+    {% endif %}  
+    </div>
+    <div class="col-sm-6 mb-4">
+      <h1 class="product-description-name para">{{ object.title }}</h1><br>
+      <h2 class="product-description-price"><i class="fa fa-usd" aria-hidden="true"></i>{{ object.price }}</h2><br>
+      {% include 'cart/update_cart.html' with product=object cart=cart %}  
+      <p class="product-details"><strong>Details</strong></p>
+      <p>{{ object.description }}</p>
+
+
+      <button class="btn btn btn-outline-info  ">
+                    <a class="nav-link " href="{{ products_url }}">Continue shopping</a>
+                </button><br>
+      <button class="btn btn btn-outline-success  mt-3">
+                    <a class="nav-link " href="{{ cart_url }}">Checkout</a>
+                </button>
+
+    </div>
+
+
+</div>
+<hr>
+{% endblock %}

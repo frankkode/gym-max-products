@@ -1,0 +1,112 @@
+{% load static %}
+{% url 'products' as products_url %}
+{% url 'register' as register_url %}
+{% url 'login' as login_url %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" />
+    <title>Gym max</title>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <div class="page-container">
+        <div class="container">
+        {% if messages %}
+            <div class="alert alert-success mt-5">
+                <div class="messages">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                </div>
+            </div>
+       {% endif %}
+    
+{% block content %} {% endblock %}
+        </div>
+
+        <!-- Footer -->
+  <footer class="bg-white mt-4">
+    <div class="container py-5">
+      <div class="row py-4">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="" alt="" width="180" class="mb-3">
+          <p class="font-italic text-muted">We are always social and active, catch us if you can</p>
+          <ul class="list-inline mt-4">
+            <li class="list-inline-item"><a href="https://twitter.com/?lang=en" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank" title="instagram"><i class="fa fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.pinterest.com/" target="_blank" title="pinterest"><i class="fa fa-pinterest"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="vimeo"><i class="fa fa-vimeo"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Shop</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="{% url 'email' %}" class="text-muted">Personal instructor</a></li>
+            <li class="mb-2"><a href="{% url 'email' %}" class="text-muted">Massage</a></li>
+            <li class="mb-2"><a href="{{ products_url }}" class="text-muted">Stores</a></li>
+            <li class="mb-2"><a href="{% url 'blog_index'%}" class="text-muted">Training Tips</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">GYM Max</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="{{ login_url }}" class="text-muted">Login</a></li>
+            <li class="mb-2"><a href="{{ register_url }}" class="text-muted">Register</a></li>
+            <li class="mb-2"><a href="{{ products_url }}" class="text-muted">Our Products</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Newsletter</h6>
+          <p class="text-muted mb-4">We are working hard to fix our news letter</p>
+          <div class="p-1 rounded border">
+            <div class="input-group">
+              <input type="email" placeholder="Comming soon!" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
+              <div class="input-group-append">
+                <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyrights -->
+    <div class="bg-light py-4">
+      <div class="container text-center">
+        <p class="text-muted mb-0 py-2">&copy; 2019<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script> <a href="https://frank-masabo.herokuapp.com/"><strong>MASA<small style="color:orange;">code</small></strong></a> All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- End -->
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- jquery-confirm JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <!-- js Render -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jsrender/0.9.88/jsrender.min.js'></script>
+    {% include 'js_templates.html' %}
+    <!-- Stripe JS -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+    <!-- Django Secure AJAX JS -->
+
+    <script src='{% static "js/csrf.ajax.js" %}'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+{% extends 'base.html' %}
+{% url 'contact' as contact_url %}
+{% url 'products' as products_url %}
+{% load static %}
+{% block content %}
+    <div id="about" class="img-fluid">
+  </div>
+    <hr class="my-5">
+ <div class="container">
+  <div class="row ">
+ 
+    <!--Section: Main features & Quick Start-->
+   <div class="container my-5 z-depth-1">
+
+
+  <!--Section: Content-->
+  <section class="dark-grey-text">
+
+    <div class="row pr-lg-5">
+      <div class="col-md-7 mb-4">
+
+        <div class="view">
+          <img src="https://mdbootstrap.com/img/illustrations/undraw_connected_world_wuay.svg" class="img-fluid" alt="smaple image">
+        </div>
+
+      </div>
+      <div class="col-md-5 d-flex align-items-center">
+        <div>
+          
+          <h3 class="font-weight-bold mb-4">GYM Max</h3>
+
+        	<p>At GYM Max, we work to inspire and motivate you for better health. We are a team of personal health coaches, exercise instructors, masseurs, 
+          Shiite therapists, naprapaths and chiropractors. Since we all specialize in our fields, together we can give you so much more than what you get at a regular gym.
+           We want you to feel good both physically and mentally. With us you can train individually or in groups, together with a personal trainer or perhaps with your colleague.
+            Our methodology is based on letting you decide the guidelines and based on these we are more than happy to help. Our goal is to make the road there as simple and fun-filled as possible for you.</p>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!--Section: Content-->
+ 
+</div>
+     <hr class="my-5">
+
+<div class="container z-depth-1 my-5 p-5">
+
+  <!-- Section -->
+  <section>
+
+    <h3 class="font-weight-bold text-center green-text pb-2">Our Services</h3>
+    <hr class="w-header my-4">
+    <p class="lead text-center text-muted pt-2 mb-5">Join thousands of satisfied customers using our GYM
+      globally.</p>
+
+    <div class="row d-flex justify-content-center">
+
+      <div class="col-md-6 col-xl-4">
+        <h5 class="font-weight-normal"><a class="orange-text" href="{% url 'email' %}">PERSONAL INSTRUCTORS</a></h5>
+        <p class="small grey-text remove">He will help to meet your goal</p>
+      </div>
+
+      <div class="col-md-6">
+        <p class="text-muted mb-5 pb-2">Each PT-session lasts 55 minutes. You receive help related to motivation, technique, exercises and training routines. Together, we tailor a program and set goals that suits you. During your first session, you fill out a health statement to ensure that your personal trainer will receive a full picture of your training background, lifestyle and your goals. Based on your goals, you and your personal trainer will agree on how many times and how long you will train together.
+
+ 
+
+Depending on what you want to focus on, you can test your fitness, strength, mobility or stability. Together, you follow up on the tests to ensure that you are moving in the direction you want.
+
+ 
+
+The agreement with a personal trainer is personal and the period of validity is 1 year from signing of the contract.</p>
+      </div>
+
+
+      <div class="col-md-6 col-xl-4">
+        <h5 class="font-weight-normal"><a class="orange-text" href="{% url 'email' %}">GYM</a></h5>
+        <p class="small grey-text remove">open 24/24 </p>
+      </div>
+
+      <div class="col-md-6">
+        <p class="text-muted mb-5 pb-2">We are committed to helping you achieve your goals:
+
+
+Build essential workplace skills,
+Earn a credential or degree,
+Plan your career,
+Create your resume,
+Practice your job search and interview skills,
+Get your finances in order or
+Connect to what you need to get ahead – resources like transportation, childcare, professional clothes and more
+Jumpstart your career today! Find your nearest Goodwill career center with our locator..</p>
+      </div>
+
+
+      <div class="col-md-6 col-xl-4">
+        <h5 class="font-weight-normal"><a class="orange-text" href="{% url 'email' %}">GROUP TRAINING</a></h5>
+        <p class="small grey-text remove">get motivation from others</p>
+      </div>
+
+      <div class="col-md-6">
+        <p class="text-muted mb-5 pb-2 ">A two-day method training on team development in practice.
+You get the entire toolbox with effective tools, tasks and models for effective theme development.
+
+What does the task look like that makes it fun to define the group's goals? Which areas are most rewarding for working with the group? How much does the leader need to be prepared? What does a smart follow-up look like?
+There are many questions about how to work with a working group in the room. And certainly just as many answers ...
+We have compiled experiences from hundreds of team developments, with everything from management groups to working groups, immature and mature teams. Small and large.
+We share all of these experiences linked to a single ambition; That you can create as much development power as possible for a team in a limited time.
+With you after the training you have with you a constantly updated toolbox with exercises, tasks, models, handouts and work materials, which you can use directly in the work with team development.
+Method training links directly to the use of Teambook to create long-term sustainable processes.
+
+Said about Team Trainer:
+"One of the absolute best courses I have participated in!"
+“Valuable tools that are so well-packaged and proven”
+“Soooo relevant! I know how to deal with my challenges now! Thanks!"
+"Simple in a smart way"
+"Lovely with all material packed and available"
+"Absolutely wonderful support!"</p>
+      </div>
+
+      <div class="col-md-6 col-xl-4">
+        <h5 class="font-weight-normal"><a class="orange-text" href="{{ products_url }}">STORE</a></h5>
+        <p class="small grey-text remove">Buy your exercising procucts</p>
+      </div>
+
+      <div class="col-md-6">
+        <p class="text-muted mb-5 pb-2">Gym Max is today one of the largest manufacturers of strength training equipment in the Nothern Europe.
+
+Since 1994 we have focused on designing high quality and functional equipment with a long lifespan and minimal maintenance needs. Our customers view us as a total solution and a profitable investment.
+
+
+At Gym Max we are truly passionate about wellness and hope that you want to join us in achieving our dream of a healthier world. Don’t hesitate to contact us for more information about how we best can help you with your needs</p>
+      </div>
+
+<div class="col-md-6 col-xl-4">
+        <h5 class="font-weight-normal"><a class="orange-text" href="/blog">BLOG</a></h5>
+        <p class="small grey-text remove">Read our guide articles</p>
+      </div>
+
+      <div class="col-md-6">
+        <p class="text-muted mb-5 pb-2">Gym Max is today one of the largest manufacturers of strength training equipment in the Nothern Europe.
+
+Since 1994 we have focused on designing high quality and functional equipment with a long lifespan and minimal maintenance needs. Our customers view us as a total solution and a profitable investment.
+
+
+At Gym Max we are truly passionate about wellness and hope that you want to join us in achieving our dream of a healthier world. Don’t hesitate to contact us for more information about how we best can help you with your needs.</p>
+      </div>
+
+
+    </div>
+
+  </section>
+  <!-- Section -->
+
+</div>
+
+      <hr class="my-5">
+    <!-- Grid column -->
+    <div class="row text-center text-md-left">
+      <div class="col-lg-6 col-md-12 mb-5 d-md-flex justify-content-between">
+        <div class="avatar mb-md-0 mb-4 mx-4 mt-4">
+        <img
+              src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg"
+              class="img-fluid rounded-circle z-depth-1"
+            />
+        </div>
+        
+            
+          
+        <div class="mx-4">
+          <h4 class="font-weight-bold mb-3 mt-4">Frank M. Simplice</h4>
+          <h6 class="font-weight-bold grey-text mb-3">Director</h6>
+          <p class="grey-text ">i am a graduate at CODE INSTITUTE, i am happy to have you here today! Enjoy your profit </p>
+        </div>
+      </div>
+      </div>
+      <!-- Grid column -->
+
+
+<!-- Second Row [Team]-->
+    <h2 class="font-weight-bold mb-2">Our Team</h2>
+    
+    <div class="row pb-5 mb-4">
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <!-- Card-->
+            <div class="card shadow-sm border-0 rounded">
+                <div class="card-body p-0"><img src="{% static 'img/coach5.jpg' %}" alt="" class="w-100 card-img-top team-height" >
+                    <div class="p-4">
+                        <h5 class="mb-0">Mark Rockwell</h5>
+                        <p class="small text-muted">Proffessional Trainer</p>
+                        <ul class="social mb-0 list-inline mt-3">
+                            <li class="list-inline-item"><a href="https://twitter.com/?lang=en" class="social-link" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.facebook.com/" class="social-link" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.instagram.com/" class="social-link" target="_blank" title="instagram"><i class="fa fa-instagram"></i></a></li>
+                            <li class="list-inline-item m-0"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <!-- Card-->
+            <div class="card shadow-sm border-0 rounded">
+                <div class="card-body p-0"><img src="{% static 'img/coach9.png' %}" alt="" class="w-100 card-img-top team-height">
+                    <div class="p-4">
+                        <h5 class="mb-0">WONG sam</h5>
+                        <p class="small text-muted">Proffessional Trainer</p>
+                        <ul class="social mb-0 list-inline mt-3">
+                            <li class="list-inline-item"><a href="https://twitter.com/?lang=en" class="social-link" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/" target="_blank" class="social-link" title="facebook"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank" class="social-link" title="instagram"><i class="fa fa-instagram"></i></a></li>
+                            <li class="list-inline-item m-0"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <!-- Card-->
+            <div class="card shadow-sm border-0 rounded">
+                <div class="card-body p-0"><img src="{% static 'img/coach3.jpeg' %}" alt="" class="w-100 card-img-top team-height">
+                    <div class="p-4">
+                        <h5 class="mb-0">frank Tom</h5>
+                        <p class="small text-muted">Head coach</p>
+                        <ul class="social mb-0 list-inline mt-3">
+                            <li class="list-inline-item"><a href="https://twitter.com/?lang=en" class="social-link" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/" target="_blank" class="social-link" title="facebook"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank" class="social-link" title="instagram"><i class="fa fa-instagram"></i></a></li>
+                            <li class="list-inline-item m-0"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <!-- Card-->
+            <div class="card shadow-sm border-0 rounded">
+                <div class="card-body p-0"><img src="{% static 'img/coach4.jpeg' %}" alt="" class="w-100 card-img-top team-height">
+                    <div class="p-4">
+                        <h5 class="mb-0">Roxie masabo</h5>
+                        <p class="small text-muted">Senior coach</p>
+                        <ul class="social mb-0 list-inline mt-3">
+                            <li class="list-inline-item"><a href="https://twitter.com/?lang=en" class="social-link" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/" class="social-link" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/" class="social-link" target="_blank" title="instagram"><i class="fa fa-instagram"></i></a></li>
+                            <li class="list-inline-item m-0"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-5">
+    </div>
+    </div>
+ 
+<hr>
+
+{% endblock content %}

@@ -1,0 +1,1 @@
+web: gunicorn gym_max.wsgi:application

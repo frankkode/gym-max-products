@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %} {% url 'products' as products_url %}
+<h3 class="cart-title para">Shopping Cart</h3>
+
+{% if cart.products.exists %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"><i class="fa fa-shopping-cart"></i></th>
+      <th scope="col para">Product Name</th>
+      <th scope="col para">Product Price </th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for product in cart.products.all %}
+    <tr>
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{ product.title }} 
+      <form method='POST' action='{% url "cart:update" %}' class="form"> {% csrf_token %}
+         <input type='hidden' name='product_id' value='{{ product.id }}' />
+        <button type="submit" class='btn small-btn para'>Remove</button> 
+      </form>
+      </td> 
+      <td><i class="fa fa-usd" aria-hidden="true"></i>{{ product.price }}</td>
+    </tr>
+    {% endfor %}
+    <tr>
+      <td colspan="2"></td>
+      <td><b>Subtotal</b> <i class="fa fa-usd" aria-hidden="true"></i>{{ cart.subtotal }}</td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td><b>Total</b> <i class="fa fa-usd" aria-hidden="true"></i>{{ cart.total }}</td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td><a class='btn btn-lg btn-success para cart-checkout' href='{% url "cart:checkout" %}'>Checkout</a></td>
+    </tr>
+  </tbody>
+</table>
+{% else %}
+<p class="lead empty para">Cart is empty.</p>
+
+{% endif %}
+<button class="btn btn-warning products {% if request.path == products_url %} active {% endif %}">
+                    <a class="nav-link para" href="{{ products_url }}">Continue shopping</a>
+                </button>
+{% endblock %}
