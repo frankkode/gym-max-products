@@ -1,7 +1,9 @@
 {% extends 'base.html' %} 
 {% load static %} 
 {% block content %}
-<section class="mb-4">
+<section >
+<div class="container">
+<div class="row">
 <div id="body" class="img-fluid">
 
     <div class="home-text">
@@ -10,10 +12,14 @@
         <a href="{% url 'products' %}" class="button para">BUY ONE HERE<i class="fa fa-caret-right right"></i></a>
     </div>
 </div>
+</div>
+</div>
 </section>
 
 <section class="show-case mb-4 mainpage">
-<div class="show-case">
+<div class="container">
+<div class="row">
+<div class="show-case ">
 <!-- Second Row -->
     <div class="row pb-5 mb-4">
         <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
@@ -62,6 +68,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 </div>
 </section>

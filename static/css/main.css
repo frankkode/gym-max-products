@@ -84,7 +84,8 @@ body {
 
 .navbar-brand {
   font-family: 'Cinzel', serif;
-  font-weight: 650;
+  font-weight: 800;
+  color: rgb(250, 126, 80);
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -101,46 +102,60 @@ body {
 .home,
 .contact,
 .about,
+.blog,
 .products,
 .logout,
 .login,
 .register {
+  color: #000000 !important;
   border-bottom: 1px solid transparent;
   transition: all .2s ease-in;
 }
 
 .register:hover {
-  border-bottom: 1px solid rgb(223, 15, 242);
-
+  border-bottom: 6px solid rgb(223, 15, 242);
+  color: #30fa70;
 
 }
 
 .home:hover {
-  border-bottom: 1px solid rgb(17, 214, 23);
+  border-bottom: 6px solid rgb(17, 214, 23);
+  color: #30fa70;
 }
 
 .contact:hover {
-  border-bottom: 1px solid rgb(10, 223, 166);
+  border-bottom: 6px solid rgb(10, 223, 166);
+  color: #30fa70;
 
 }
 
 .products:hover {
-  border-bottom: 1px solid rgb(223, 198, 10);
+  border-bottom: 6px solid rgb(223, 198, 10);
+  color: #30fa70;
 
 }
 
 .login:hover {
-  border-bottom: 1px solid rgb(6, 40, 230);
+  border-bottom: 6px solid rgb(6, 40, 230);
+  color: #30fa70;
 
 }
 
 .logout:hover {
-  border-bottom: 1px solid rgba(23, 148, 162, 0.81);
+  border-bottom: 6px solid rgba(23, 148, 162, 0.81);
+  color: #30fa70;
 
 }
 
 .about:hover {
-  border-bottom: 1px solid rgba(162, 95, 23, 0.81);
+  border-bottom: 6px solid rgba(162, 95, 23, 0.81);
+  color: #30fa70;
+
+}
+
+.blog:hover {
+  border-bottom: 6px solid rgba(162, 95, 23, 0.81);
+  color: #30fa70;
 
 }
 
@@ -151,7 +166,7 @@ body {
   flex-grow: 1;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #966e6e;
+  background-color: #85966e;
   z-index: 1;
   text-align: center;
 }
@@ -177,7 +192,7 @@ button:focus {
   background: url("../img/mainimage.png");
   position: absolute;
   background-color: rgb(221, 244, 196);
-  top: -13px;
+  top: 0px;
   left: 0;
   right: 0;
   height: 35%;
@@ -262,7 +277,7 @@ hr {
 
 .login-form {
   margin-top: 5%;
-  background: rgba(205, 139, 151, 0.94);
+  background: rgba(233, 237, 231, 0.94);
   padding: 30px;
   border-radius: 5px;
 }
@@ -298,7 +313,7 @@ hr {
 
 .register-form {
   margin-top: 5%;
-  background: rgba(208, 223, 154, 0.872);
+  background: rgba(237, 238, 233, 0.872);
   padding: 30px;
   border-radius: 5px;
 }
@@ -331,10 +346,8 @@ ul {
 /*contact page*/
 
 .contact-form {
-  margin-top: 10%;
-  background: rgb(233, 154, 101);
+  margin-top: 15%;
   padding: 30px;
-  border-radius: 5px;
 }
 
 .form-control {
@@ -481,7 +494,7 @@ ul {
 .remove {
   text-transform: uppercase;
   font-size: small;
-  background-color: rgb(226, 97, 32);
+  background-color: rgb(254, 122, 56);
   color: rgb(235, 190, 190);
   padding: 2px 4px 2px 4px;
 }
@@ -514,7 +527,7 @@ ul {
 
 .checkout-forms {
   margin-top: 5%;
-  background: rgb(117, 211, 112);
+  background: rgb(229, 240, 228);
   padding: 30px;
   border-radius: 5px;
 }
@@ -568,7 +581,7 @@ ul {
 
 .shipping-form {
   margin-top: 5%;
-  background: rgba(96, 242, 125, 0.776);
+  background: rgba(227, 238, 230, 0.776);
   padding: 30px;
   border-radius: 5px;
 }
@@ -707,6 +720,7 @@ ul {
   }
 }
 
+
 @media (max-width: 750px) {
 
   .product-description-name {
@@ -842,7 +856,7 @@ i {
 
 .form-control::placeholder {
   font-size: 0.95rem;
-  color: #aaa;
+  color: rgb(208, 169, 208);
   font-style: italic;
 }
 
