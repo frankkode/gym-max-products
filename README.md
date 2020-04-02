@@ -190,7 +190,7 @@ the main page have calling image, services, pricing The footer has social icons,
 
 ## Phone(samsung)
 
-![Screenshot](media/phone2.png)
+![Screenshot](media/phon2.png)
 
 ## iPad
 
