@@ -68,11 +68,11 @@ the main page have calling image, services, pricing The footer has social icons,
 
  ![main image](media/main-image.png)
 
-## Calling
+* Calling
 
  ![main image](media/main-image2.png) 
 
-## Cervices 
+* Cervices 
 
 ![main image](media/service.png) 
 
