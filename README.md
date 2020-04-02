@@ -59,7 +59,6 @@ The website is for visitors who are intrested in training and purchasing gym mac
 
 * As a user, I can get subscription, personal instructor, group training from admin, and read tips about fitness in blog.
 
-
 ## Design
 
 * The design is a simple with all content & products on products page. The navbar has home, about, contact us, blog, login, register and cart icons. The logo takes you back to the homepage. There is a search bar where users   can search for items.
@@ -67,7 +66,15 @@ the main page have calling image, services, pricing The footer has social icons,
 
 ## Mockup
 
-* Main image [main image](media/mainimage.png) 
+ ![main image](media/main-image.png)
+
+## Calling
+
+ ![main image](media/main-image2.png) 
+
+## Cervices 
+
+![main image](media/service.png) 
 
 # Features
 
@@ -78,12 +85,12 @@ the main page have calling image, services, pricing The footer has social icons,
 * The user can press on the more details button on each item to find out more information about the   product.
 * The user can register profile by clicking on register icon in the navbar.
 
-* ![register](media/registerimage.png) 
+ ![register](media/registerimage.png) 
 
 * The user can login with their email or username by clicking on the login icon in the navbar.
 * The user can inspect the cart by clicking on the cart icon the navbar.
 
-* ![Product](media/itemviewcart.png)
+ ![Product](media/itemviewcart.png)
 
 * The user can remove any product by clicking the remove button in the cart page.
 * The user can checkout by pressing on the checkout button in the cart page.
@@ -176,6 +183,22 @@ the main page have calling image, services, pricing The footer has social icons,
 ## Responsivness
 
 * The site was tested on multiple devices using Google chrome developer tools to see the responsivness for different media devices. The devices that were tested were: Samsung S5, Samsung Galaxy s10, iPhone X, iPhone 5/6/7/8, iPhone 6/7/8 Plus, iPad and iPad Pro.
+
+## Phone (iPhone)
+
+![Screenshot](media/phone.png)
+
+## Phone(samsung)
+
+![Screenshot](media/phone2.png)
+
+## iPad
+
+![Screenshot](media/ipad.png)
+
+## iPad-pro
+
+![Screenshot](media/ipad-pro.png)
 
 ## Tests.py
 

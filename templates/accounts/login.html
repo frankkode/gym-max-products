@@ -1,4 +1,7 @@
 {% extends 'base.html' %} {% load crispy_forms_tags %} {% block content %}
+<div class="col-md-12 text-center ">
+            <p class="breadcrumbs text-center titles"><span class="mr-2"><a href="{% url 'home' %}">Home.</a></span> <span>Login</span></p>
+        </div>
 <h2 class="login-header para">Login</h2>
 <form method="POST" class="login-form">
     {% csrf_token %} {{ form|crispy }}

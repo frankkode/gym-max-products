@@ -3,6 +3,9 @@
 {% url 'products' as products_url %}
 {% load static %} 
 {% block content %}
+<div class="col-md-12 text-center ">
+            <p class="breadcrumbs text-center titles"><span class="mr-2"><a href="{% url 'home' %}">Home.</a></span> <span>Products</span></p>
+        </div>
   <h1 class="text-center products-title">SHOW ROOM</h1>
   <form action="{% url 'do_search'%}" method="get">
 

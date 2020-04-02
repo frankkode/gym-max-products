@@ -1,54 +1,37 @@
 {% url 'home' as home_url %} {% url 'contact' as contact_url %} {% url 'products' as products_url %} {% url 'login' as login_url %} {% url 'logout' as logout_url %} {% url 'register' as register_url %} {% url 'cart:home' as cart_url %}
 
-<!-- Sticky navbar-->
-<header class="header ">
-        <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
-    <div class="container nav-c">
-        <a class="navbar-brand" href="{% url 'home' %}">GYM Max</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon right"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item {% if request.path == home_url %} active {% endif %}">
-                    <a class="nav-link home" href="{{ home_url }}">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item {% if request.path == about_url %} active {% endif %}">
-                    <a class="nav-link about" href="{% url 'about' %}">About us</a>
-                </li>
-                <li class="nav-item {% if request.path == contact_url %} active {% endif %}">
-                    <a class="nav-link contact" href="{% url 'email' %}">Contact</a>
-                </li>
-                <li class="nav-item {% if request.path == products_url %} active {% endif %}">
-                    <a class="nav-link products" href="{{ products_url }}">Products</a>
-                </li>
-                <li class="nav-item {% if request.path == blog_url %} active {% endif %}">
-                    <a class="nav-link blog" href="/blog">Blog</a>
-                </li>
-                <li class="nav-item {% if request.path == cart_url %} active {% endif %}">
-                    <a class="nav-link" href="{{ cart_url }}"><span class="navbar-cart-count">{{ request.session.cart_items }}</span><i class="fa fa-shopping-cart"></i></a>
-                </li>  
-            </ul>
-            <ul class="navbar-nav justify-content-end">
+  
+<header class="main_h">
+
+    <div class="row">
+        <a class="logo" href="{% url 'home' %}">GYM-Max</a>
+
+        <div class="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="{{ home_url }}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'email' %}">Contact Us</a></li>
+                <li><a href="{{ products_url }}">Store</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a  href="{{ cart_url }}"><span class="navbar-cart-count">{{ request.session.cart_items }}</span><i class="fa fa-shopping-cart"></i></a></li>
                 {% if request.user.is_authenticated %}
-                <li class="nav-item logout {% if request.path == logout_url %} active {% endif %}">
-                    <a class="nav-link logout" href="{{ logout_url }}">Logout</a>
-                </li>
+                <li><a  href="{{ logout_url }}">Logout</a></li>
                 {% else %}
-                <li class="nav-item {% if request.path == register_url %} active {% endif %}">
-                    <a class="nav-link register" href="{{ register_url }}">Register</a>
-                </li>
-               <li class="nav-item {% if request.path == login_url %} active {% endif %}">
-                    <a class="nav-link login" href="{{ login_url }}">Login</a>
-                </li>
+                <li><a  href="{{ register_url }}">Register</a></li>
+                <li><a  href="{{ login_url }}">Login</a></li>
                 {% endif %}
-
             </ul>
+        </nav>
 
-</div>
-</div>
-</nav>
+    </div> <!-- / row -->
+
 </header>
 
 

@@ -3,6 +3,9 @@
 
 {% block content %}
 {% url 'cart:home' as cart_url %}
+<div class="col-md-12 text-center ">
+            <p class="breadcrumbs text-center titles"><span class="mr-2"><a href="{% url 'home' %}">Home.</a></span> <span>Product Details</span></p>
+        </div>
 
 <div class="row description-row">
     <div class="col-sm-6">
@@ -14,7 +17,7 @@
     </div>
     <div class="col-sm-6 mb-4">
       <h1 class="product-description-name para">{{ object.title }}</h1><br>
-      <h2 class="product-description-price"><i class="fa fa-usd" aria-hidden="true"></i>{{ object.price }}</h2><br>
+      <h1><i class="fa fa-usd" aria-hidden="true"></i> {{ object.price }}</h1><br>
       {% include 'cart/update_cart.html' with product=object cart=cart %}  
       <p class="product-details"><strong>Details</strong></p>
       <p>{{ object.description }}</p>

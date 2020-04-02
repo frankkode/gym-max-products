@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
 {% block content %} {% url 'products' as products_url %}
-<h3 class="cart-title para">Shopping Cart</h3>
+<div class="col-md-12 text-center ">
+            <p class="breadcrumbs text-center titles"><span class="mr-2"><a href="{% url 'home' %}">Home.</a></span> <span>Shopping Cart</span></p>
+        </div>
+
+
 
 {% if cart.products.exists %}
-<table class="table">
+<div class="table-content">
+<table class="table table-content">
   <thead>
     <tr>
       <th scope="col"><i class="fa fa-shopping-cart"></i></th>
@@ -38,6 +43,7 @@
     </tr>
   </tbody>
 </table>
+</div>
 {% else %}
 <p class="lead empty para">Cart is empty.</p>
 

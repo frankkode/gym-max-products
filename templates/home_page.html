@@ -1,195 +1,86 @@
 {% extends 'base.html' %} 
 {% load static %} 
 {% block content %}
-<section >
-<div class="container">
-<div class="row">
-<div id="body" class="img-fluid">
+<div class="calling-man">
+<div class="hero">
 
+    <h1 class="para"><span>WELCOME TO</span><br>GYM-MAX</h1>
+
+    <div class="mouse">
+        <span></span>
+    </div>
+</div>
+</div>
+<section>
+<div id="body" class="img-fluid">
     <div class="home-text">
         <p class="para">Be Fit</p>
         <h1 class="header">Stay Fit.</h1><br>
         <a href="{% url 'products' %}" class="button para">BUY ONE HERE<i class="fa fa-caret-right right"></i></a>
     </div>
-</div>
-</div>
-</div>
+</div>   
 </section>
+<!--test pricing-->
+<h1 class="para text-center">Our Services</h1>
+    <section class="ftco-section ftco-no-pt" style="">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-6 img img-2 order-md-last responsive-img">
+    			<img src="{% static 'img/bg_2-1.jpg' %}" alt="" class="responsive-img" style="height:auto; width:100%;">
+    			</div>
+    			<div class="col-md-6 py-5">
+    				<div class="program d-flex ftco-animate">
+							<div class="icon d-flex mr-lg-3 justify-content-center align-items-center order-lg-last">
+								<span class="flaticon-gym"></span>
+							</div>
+							<div class="text ml-5 mr-lg-4 text-lg-right">
+								<h3 class="titles">Crossfit</h3>
+								<p>Set across 10,000 square feet of strength training space: an outstanding range of the latest weight training equipment, including Technogym, Cybex, Precor and Freemotion awaits.</p>
+							</div>
+  					</div>
+  					<div class="program d-flex ftco-animate">
+							<div class="icon d-flex mr-lg-3 justify-content-center align-items-center order-lg-last">
+								<span class="flaticon-woman"></span>
+							</div>
+							<div class="text ml-5 mr-lg-4 text-lg-right">
+								<h3 class="titles">Aerobic Classes</h3>
+								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+							</div>
+  					</div>
+  					<div class="program d-flex ">
+							<div class="icon d-flex mr-lg-3 justify-content-center align-items-center order-lg-last">
+								<span class="flaticon-workout"></span>
+							</div>
+							<div class="text ml-5 mr-lg-4 text-lg-right">
+								<h3 class="titles">Shop</h3>
+								<p>Where fashion and fitness intersect. Pursue your results with activewear essentials and exclusive collaborations.
 
-<section class="show-case mb-4 mainpage">
-<div class="container">
-<div class="row">
-<div class="show-case ">
-<!-- Second Row -->
-    <div class="row pb-5 mb-4">
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <!-- Card-->
-            <div class="card shadow-sm border-0 rounded">
-                <div class="card-body p-0 height-gif"><img src="{% static 'img/indoor.gif' %}" alt="" class="w-100 card-img-top height-gif">
-                    <div class="p-4">
-                        <a href="{% url 'products' %}" class="btn mb-4 para remove">INDOOR PRODUCTS</a>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <!-- Card-->
-            <div class="card shadow-sm border-0 rounded">
-                <div class="card-body p-0 height-gif"><img src="{% static 'img/aoutdoor.gif' %}" alt="" class="w-100 card-img-top height-gif">
-                    <div class="p-4">
-                        <a href="{% url 'products' %}" class="btn mb-4 para remove">OUTDOOR PRODUCT</a>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <!-- Card-->
-            <div class="card shadow-sm border-0 rounded">
-                <div class="card-body p-0 height-gif"><img src="{% static 'img/pull.gif' %}" alt="" class="w-100 card-img-top height-gif">
-                    <div class="p-4">
-                        <a href="{% url 'email' %}" class="btn mb-4 para remove">PERSONAL INSTRUCTOR</a>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <!-- Card-->
-            <div class="card shadow-sm border-0 rounded">
-                <div class="card-body p-0 height-gif"><img src="{% static 'img/groupe.gif' %}" alt="" class="w-100 card-img-top height-gif">
-                    <div class="p-4">
-                        <a href="{% url 'email' %}" class="btn mb-4 para remove">GROUPE TRAINING</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-</div>
-</section>
+Where fashion and fitness intersect. Pursue your results with activewear essentials and exclusive collaborations.</p>
+							</div>
+  					</div>
+  					<div class="program d-flex ftco-animate">
+							<div class="icon d-flex mr-lg-3 justify-content-center align-items-center order-lg-last">
+								<span class="flaticon-meditation"></span>
+							</div>
+							<div class="text ml-5 mr-lg-4 text-lg-right">
+								<h3 class="titles">Yoga Classes</h3>
+								<p>Give your muscles some love after your workout to relieve tension and tightness in a calm, comfortable space.</p>
+							</div>
+  					</div>
+  					<div class="program d-flex ftco-animate">
+							<div class="icon d-flex mr-lg-3 justify-content-center align-items-center order-lg-last">
+								<span class="flaticon-stationary-bike"></span>
+							</div>
+							<div class="text ml-5 mr-lg-4 text-lg-right">
+								<h3 class="titles">Cardio Training</h3>
+								<p>Made up of exercise stations designed to efficiently condition your body with functional training, our UXF Training zone is for all members.</p>
+							</div>
+  					</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+<hr>
 
-<section class="section-color">
-  <div class="container py-5">
-
-    <!-- header pricing -->
-    <header class="text-center mb-5 text-white">
-      <div class="row">
-        <div class="col-lg-7 mx-auto">
-          <h1>GYM Max pricing table</h1>
-          <p class="para">Choose the one fits you!! <br></a></p>
-        </div>
-      </div>
-    </header>
-    <!-- END -->
-
-
-
-    <div class="row text-center align-items-end">
-      <!-- Pricing Table1-->
-      <div class="col-lg-4 mb-5 mb-lg-0">
-        <div class="bg-white p-5 rounded-lg shadow">
-          <h1 class="h6 text-uppercase font-weight-bold mb-4">Basic</h1>
-          <h2 class="h1 font-weight-bold">$199<span class="text-small font-weight-normal ml-2">/ month</span></h2>
-
-          <div class="custom-separator my-4 mx-auto bg-primary"></div>
-
-          <ul class="list-unstyled my-5 text-small text-left">
-            <li class="mb-3">
-              <i class="fa fa-check mr-2 text-primary"></i>Gym access</li>
-            <li class="mb-3">
-              <i class="fa fa-check mr-2 text-primary"></i>Sauna access</li>
-            <li class="mb-3">
-              <i class="fa fa-check mr-2 text-primary"></i>Video instructions</li>
-            <li class="mb-3 text-muted">
-              <i class="fa fa-times mr-2"></i>
-              <del>Personal instructor</del>
-            </li>
-            <li class="mb-3 text-muted">
-              <i class="fa fa-times mr-2"></i>
-              <del>Group training</del>
-            </li>
-            <li class="mb-3 text-muted">
-              <i class="fa fa-times mr-2"></i>
-              <del>Massage</del>
-            </li>
-          </ul>
-          <a href="{% url 'email' %}" class="btn btn-primary btn-block p-2 shadow rounded-pill">For more info</a>
-        </div>
-      </div>
-      <!-- END -->
-
-
-      <!-- Pricing Table2-->
-      <div class="col-lg-4 mb-5 mb-lg-0">
-        <div class="bg-white p-5 rounded-lg shadow">
-          <h1 class="h6 text-uppercase font-weight-bold mb-4">Pro</h1>
-          <h2 class="h1 font-weight-bold">$399<span class="text-small font-weight-normal ml-2">/ month</span></h2>
-
-          <div class="custom-separator my-4 mx-auto bg-primary"></div>
-
-          <ul class="list-unstyled my-5 text-small text-left font-weight-normal">
-            <li class="mb-3">
-              <i class="fa fa-check mr-2 text-primary"></i>Gym access</li>
-            <li class="mb-3">
-              <i class="fa fa-check mr-2 text-primary"></i>Sauna access</li>
-            <li class="mb-3">
-              <i class="fa fa-check mr-2 text-primary"></i>Video instructions</li>
-            <li class="mb-3">
-              <i class="fa fa-check mr-2 text-primary"></i>Group training</li>
-            <li class="mb-3">
-              <i class="fa fa-check mr-2 text-primary"></i>Personal instructor</li>
-            <li class="mb-3 text-muted">
-              <i class="fa fa-times mr-2"></i>
-              <del>Massage</del>
-            </li>
-          </ul>
-          <a href="{% url 'email' %}" class="btn btn-primary btn-block p-2 shadow rounded-pill">For more info</a>
-        </div>
-      </div>
-      <!-- END -->
-
-
-      <!-- Pricing Table3-->
-      <div class="col-lg-4">
-        <div class="bg-white p-5 rounded-lg shadow">
-          <h1 class="h6 text-uppercase font-weight-bold mb-4">VIP</h1>
-          <h2 class="h1 font-weight-bold">$899<span class="text-small font-weight-normal ml-2">/ month</span></h2>
-
-          <div class="custom-separator my-4 mx-auto bg-primary"></div>
-
-          <ul class="list-unstyled my-5 text-small text-left font-weight-normal">
-            <li class="mb-3">
-              <i class="fa fa-check mr-2 text-primary"></i>Gym access</li>
-            <li class="mb-3">
-              <i class="fa fa-check mr-2 text-primary"></i>Sauna access</li>
-            <li class="mb-3">
-              <i class="fa fa-check mr-2 text-primary"></i>Video instructions</li>
-            <li class="mb-3">
-              <i class="fa fa-check mr-2 text-primary"></i>Group training</li>
-            <li class="mb-3">
-              <i class="fa fa-check mr-2 text-primary"></i>Personal instructor</li>
-            <li class="mb-3">
-              <i class="fa fa-check mr-2 text-primary"></i>Massage</li>
-          </ul>
-          <a href="{% url 'email' %}" class="btn btn-primary btn-block p-2 shadow rounded-pill">For more info</a>
-        </div>
-      </div>
-      <!-- END -->
-
-    </div>
-  </div>
-</section>
-
-<div class="mt-4">
-<div class="embed-responsive embed-responsive-16by9 video-fluid z-depth-1" autoplay loop muted>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/XwSJy-S6oXI?start=19" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-</div>
 <hr>
 {% endblock %}

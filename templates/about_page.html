@@ -3,7 +3,11 @@
 {% url 'products' as products_url %}
 {% load static %}
 {% block content %}
-    <div id="about" class="img-fluid">
+
+        <div class="col-md-12 text-center ">
+            <p class="breadcrumbs text-center titles"><span class="mr-2"><a href="{% url 'home' %}">Home.</a></span> <span>About Us</span></p>
+        </div>
+    <div " class="img-fluid">
   </div>
     <hr class="my-5">
  <div class="container">
@@ -58,7 +62,7 @@
 
       <div class="col-md-6 col-xl-4">
         <h5 class="font-weight-normal"><a class="orange-text" href="{% url 'email' %}">PERSONAL INSTRUCTORS</a></h5>
-        <p class="small grey-text remove">He will help to meet your goal</p>
+        <p class="small grey-text ">He will help to meet your goal</p>
       </div>
 
       <div class="col-md-6">
@@ -76,7 +80,7 @@ The agreement with a personal trainer is personal and the period of validity is 
 
       <div class="col-md-6 col-xl-4">
         <h5 class="font-weight-normal"><a class="orange-text" href="{% url 'email' %}">GYM</a></h5>
-        <p class="small grey-text remove">open 24/24 </p>
+        <p class="small grey-text ">open 24/24 </p>
       </div>
 
       <div class="col-md-6">
@@ -96,7 +100,7 @@ Jumpstart your career today! Find your nearest Goodwill career center with our l
 
       <div class="col-md-6 col-xl-4">
         <h5 class="font-weight-normal"><a class="orange-text" href="{% url 'email' %}">GROUP TRAINING</a></h5>
-        <p class="small grey-text remove">get motivation from others</p>
+        <p class="small grey-text ">get motivation from others</p>
       </div>
 
       <div class="col-md-6">
@@ -121,7 +125,7 @@ Said about Team Trainer:
 
       <div class="col-md-6 col-xl-4">
         <h5 class="font-weight-normal"><a class="orange-text" href="{{ products_url }}">STORE</a></h5>
-        <p class="small grey-text remove">Buy your exercising procucts</p>
+        <p class="small grey-text ">Buy your exercising procucts</p>
       </div>
 
       <div class="col-md-6">
@@ -135,7 +139,7 @@ At Gym Max we are truly passionate about wellness and hope that you want to join
 
 <div class="col-md-6 col-xl-4">
         <h5 class="font-weight-normal"><a class="orange-text" href="/blog">BLOG</a></h5>
-        <p class="small grey-text remove">Read our guide articles</p>
+        <p class="small grey-text ">Read our guide articles</p>
       </div>
 
       <div class="col-md-6">
@@ -187,7 +191,7 @@ At Gym Max we are truly passionate about wellness and hope that you want to join
             <div class="card shadow-sm border-0 rounded">
                 <div class="card-body p-0"><img src="{% static 'img/coach5.jpg' %}" alt="" class="w-100 card-img-top team-height" >
                     <div class="p-4">
-                        <h5 class="mb-0">Mark Rockwell</h5>
+                        <h5 class="mb-0 remove">Mark Rockwell</h5>
                         <p class="small text-muted">Proffessional Trainer</p>
                         <ul class="social mb-0 list-inline mt-3">
                             <li class="list-inline-item"><a href="https://twitter.com/?lang=en" class="social-link" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
@@ -205,7 +209,7 @@ At Gym Max we are truly passionate about wellness and hope that you want to join
             <div class="card shadow-sm border-0 rounded">
                 <div class="card-body p-0"><img src="{% static 'img/coach9.png' %}" alt="" class="w-100 card-img-top team-height">
                     <div class="p-4">
-                        <h5 class="mb-0">WONG sam</h5>
+                        <h5 class="mb-0 remove">WONG sam</h5>
                         <p class="small text-muted">Proffessional Trainer</p>
                         <ul class="social mb-0 list-inline mt-3">
                             <li class="list-inline-item"><a href="https://twitter.com/?lang=en" class="social-link" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
@@ -223,7 +227,7 @@ At Gym Max we are truly passionate about wellness and hope that you want to join
             <div class="card shadow-sm border-0 rounded">
                 <div class="card-body p-0"><img src="{% static 'img/coach3.jpeg' %}" alt="" class="w-100 card-img-top team-height">
                     <div class="p-4">
-                        <h5 class="mb-0">frank Tom</h5>
+                        <h5 class="mb-0 remove">frank Tom</h5>
                         <p class="small text-muted">Head coach</p>
                         <ul class="social mb-0 list-inline mt-3">
                             <li class="list-inline-item"><a href="https://twitter.com/?lang=en" class="social-link" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
@@ -241,7 +245,7 @@ At Gym Max we are truly passionate about wellness and hope that you want to join
             <div class="card shadow-sm border-0 rounded">
                 <div class="card-body p-0"><img src="{% static 'img/coach4.jpeg' %}" alt="" class="w-100 card-img-top team-height">
                     <div class="p-4">
-                        <h5 class="mb-0">Roxie masabo</h5>
+                        <h5 class="mb-0 remove">Roxie masabo</h5>
                         <p class="small text-muted">Senior coach</p>
                         <ul class="social mb-0 list-inline mt-3">
                             <li class="list-inline-item"><a href="https://twitter.com/?lang=en" class="social-link" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
