@@ -42,6 +42,9 @@ The website is for visitors who are intrested in training and purchasing gym mac
 * As a user, I want to search the site for a specific machine that I'm intrested in.
 
 * As a user, I can register an unique profile with a unique profile name by clicking on the register icon in the navbar.
+* I can chat live with the manager of the gym
+
+![Chat image](media/chat.png) 
 
 * As s user, I can choose between logging in with my username or email address by clicking on the login button in the navbar.
 
